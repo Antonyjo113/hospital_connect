@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../css/admin.css";
 import { useNavigate } from "react-router-dom";
 interface Enquiry {
@@ -17,8 +17,7 @@ const Admin = () => {
   const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
 
   const loadEnquiries = () => {
-    const data =
-      JSON.parse(localStorage.getItem("hospitalEnquiries")) || [];
+    const data = JSON.parse(localStorage.getItem("hospitalEnquiries") || "[]");
 
       if (data !== null) {
         setEnquiries(data);
