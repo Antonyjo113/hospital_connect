@@ -2,15 +2,27 @@
 import React, { useEffect, useState } from "react";
 import "../css/admin.css";
 import { useNavigate } from "react-router-dom";
+interface Enquiry {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  department: string;
+  message: string;
+  date: string;
+}
+
 
 const Admin = () => {
-  const [enquiries, setEnquiries] = useState([]);
+  const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
 
   const loadEnquiries = () => {
     const data =
       JSON.parse(localStorage.getItem("hospitalEnquiries")) || [];
 
-    setEnquiries(data);
+      if (data !== null) {
+        setEnquiries(data);
+      }
   };
 
   useEffect(() => {
@@ -18,7 +30,7 @@ const Admin = () => {
   }, []);
   const navigate = useNavigate();
 
-  const deleteEnquiry = (id) => {
+  const deleteEnquiry = (id: string) => {
     const updated = enquiries.filter(
       (item) => item.id !== id
     );
