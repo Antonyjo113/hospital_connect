@@ -1,0 +1,86 @@
+
+.admin-container {
+  padding: 40px 5%;
+  min-height: 100vh;
+  background: #e9f2fa;
+}
+.wrapper-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.wrapper-div h1 {
+  color: #12343b;
+  margin-bottom: 25px;
+}
+
+.admin-stats {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  color: #2391FF;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #2391FF;
+  color: white;
+}
+
+td {
+  color: #444;
+}
+
+td button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+
+
+.back-btn {
+  border: none;
+  background: #2391FF;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #2391FF;
+}
